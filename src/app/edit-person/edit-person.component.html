@@ -1,0 +1,23 @@
+<form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name" required>
+    </div>
+  
+    <div>
+      <label for="age">Age:</label>
+      <input type="number" id="age" formControlName="age" required>
+    </div>
+  
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email" required>
+    </div>
+  
+    <button type="submit">Save</button>
+  </form>
+  
+  <div *ngIf="personForm.invalid && personForm.touched">
+    <p>Please fill out the form correctly.</p>
+  </div>
+  

@@ -1,0 +1,9 @@
+<!-- people-list.component.html -->
+<ul>
+    <li *ngFor="let person of people">
+      {{ person.name }} - {{ person.age }} - {{ person.email }}
+      <button (click)="onEdit(person.id)">Edit</button>
+      <button (click)="onDelete(person.id)">Delete</button>
+    </li>
+  </ul>
+  
